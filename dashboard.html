@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Your Connection Info</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="container">
+    <h1>Welcome!</h1>
+    <p class="subtitle">Follow these steps to connect and play</p>
+
+    <div class="step">
+      <h2>Step 1: Install Moonlight</h2>
+      <p>Download the free Moonlight app for your device.</p>
+      <a class="button" href="https://moonlight-stream.org/#direct-connect" target="_blank">Download Moonlight</a>
+    </div>
+
+    <div class="step">
+      <h2>Step 2: Add this host</h2>
+      <p>Open Moonlight, choose "Add PC manually", and enter this address:</p>
+      <div class="code-box" id="hostAddress">Loading...</div>
+    </div>
+
+    <div class="step">
+      <h2>Step 3: Pair</h2>
+      <p>Moonlight will show a short PIN code. Have the host owner enter it into the Sunshine panel to approve you, one time only.</p>
+    </div>
+
+    <div class="step">
+      <h2>Step 4: Play</h2>
+      <p>Once paired, click the "LDPlayer 9" tile in Moonlight to start streaming. Tap the game icon inside to launch it yourself.</p>
+    </div>
+
+    <button id="logoutBtn" class="secondary">Log Out</button>
+  </div>
+
+  <script src="dashboard.js"></script>
+</body>
+</html>
