@@ -33,6 +33,23 @@
       <p>Once paired, click the "LDPlayer 9" tile in Moonlight to start streaming. Tap the game icon inside to launch it yourself.</p>
     </div>
 
+    <div class="step" id="inviteSection">
+      <h2>Invite a Friend</h2>
+      <p>Admins only. Enter the admin password once, then send login links to anyone.</p>
+
+      <div id="adminGate">
+        <input type="password" id="adminPassword" placeholder="Admin password">
+        <button id="unlockBtn">Unlock</button>
+        <p id="gateMsg" class="error"></p>
+      </div>
+
+      <div id="inviteBox" style="display:none; margin-top:14px;">
+        <input type="email" id="friendEmail" placeholder="friend@example.com">
+        <button id="sendInviteBtn">Send Invite</button>
+        <p id="inviteMsg"></p>
+      </div>
+    </div>
+
     <button id="logoutBtn" class="secondary">Log Out</button>
   </div>
 
