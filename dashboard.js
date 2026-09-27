@@ -3,6 +3,7 @@ if (!token) {
   window.location.href = "index.html";
 }
 
+// --- Load host connection address ---
 async function loadHostInfo() {
   try {
     const res = await fetch("/api/host-info", {
@@ -19,9 +20,22 @@ async function loadHostInfo() {
   }
 }
 
-document.getElementById("logoutBtn").addEventListener("click", function() {
+document.getElementById("logoutBtn").addEventListener("click", function () {
   sessionStorage.removeItem("token");
   window.location.href = "index.html";
 });
 
 loadHostInfo();
+
+// --- Invite a friend box ---
+let adminPassword = "";
+
+document.getElementById("unlockBtn").addEventListener("click", function () {
+  adminPassword = document.getElementById("adminPassword").value;
+  if (!adminPassword) return;
+  document.getElementById("inviteBox").style.display = "block";
+  document.getElementById("gateMsg").textContent = "";
+});
+
+document.getElementById("sendInviteBtn").addEventListener("click", async function () {
+  const
